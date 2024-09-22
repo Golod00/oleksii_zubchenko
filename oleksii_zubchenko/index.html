@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preload" href="assets/fonts.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+    <main>
+        <section class="main">
+            <div class="main__wrapper">
+                <picture>
+                    <source media="(min-width: 992px)" srcset="assets/img/main-img-pc.webp">
+                    <img class="main__img" src="assets/img/main-image.webp" alt="/" title="/" loading="lazy">
+                </picture>
+            </div>
+            <div class="sound">
+                <button id="sound-toggle" aria-label="Включить звук" class="sound__button">
+                    <svg class="sound__img sound__img--hidden" id="sound-on" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="26" cy="26" r="26" fill="#EC1119"/>
+                        <path d="M36 26C36.0052 28.0946 35.1838 30.1066 33.714 31.599C33.5274 31.784 33.2755 31.8881 33.0128 31.8888C32.75 31.8895 32.4975 31.7868 32.3099 31.6029C32.1223 31.4189 32.0146 31.1686 32.0101 30.9058C32.0057 30.6431 32.1048 30.3892 32.286 30.199C33.3847 29.0777 34.0001 27.5704 34.0001 26.0005C34.0001 24.4306 33.3847 22.9233 32.286 21.802C32.1048 21.6118 32.0057 21.3579 32.0101 21.0952C32.0146 20.8325 32.1223 20.5821 32.3099 20.3981C32.4975 20.2142 32.75 20.1115 33.0128 20.1122C33.2755 20.1129 33.5274 20.217 33.714 20.402C35.1835 21.8941 36.005 23.9058 36 26ZM35.684 16.27C35.4904 16.0886 35.2327 15.9915 34.9675 16.0002C34.7023 16.0088 34.4514 16.1224 34.27 16.316C34.0886 16.5096 33.9915 16.7674 34.0002 17.0325C34.0088 17.2977 34.1224 17.5486 34.316 17.73C35.4754 18.7733 36.4026 20.0488 37.0372 21.4736C37.6718 22.8984 37.9998 24.4407 37.9998 26.0005C37.9998 27.5603 37.6718 29.1026 37.0372 30.5274C36.4026 31.9522 35.4754 33.2277 34.316 34.271C34.1225 34.4524 34.009 34.7032 34.0005 34.9683C33.992 35.2334 34.0891 35.491 34.2705 35.6845C34.4519 35.878 34.7027 35.9915 34.9678 36C35.2329 36.0085 35.4905 35.9114 35.684 35.73C37.0431 34.4997 38.1294 32.9982 38.8728 31.3225C39.6162 29.6467 40.0003 27.8338 40.0003 26.0005C40.0003 24.1672 39.6162 22.3543 38.8728 20.6785C38.1294 19.0028 37.0431 17.5003 35.684 16.27ZM30 15.92V36.08C29.9955 36.444 29.8923 36.7999 29.7015 37.11C29.5107 37.42 29.2395 37.6725 28.9166 37.8405C28.5937 38.0086 28.2312 38.086 27.8679 38.0644C27.5045 38.0428 27.1537 37.9231 26.853 37.718L18.686 32H15C14.2044 32 13.4413 31.6839 12.8787 31.1213C12.3161 30.5587 12 29.7957 12 29V23C12 22.2044 12.3161 21.4413 12.8787 20.8787C13.4413 20.3161 14.2044 20 15 20H18.685L26.853 14.282C27.1538 14.0769 27.5046 13.9572 27.8681 13.9356C28.2316 13.9141 28.5941 13.9915 28.917 14.1597C29.2399 14.3279 29.5112 14.5805 29.7019 14.8907C29.8926 15.2009 29.9956 15.5559 30 15.92ZM18 22H15C14.7348 22 14.4804 22.1054 14.2929 22.2929C14.1054 22.4804 14 22.7348 14 23V29C14 29.2652 14.1054 29.5196 14.2929 29.7071C14.4804 29.8946 14.7348 30 15 30H18V22ZM28.006 36.082L28 15.921L20 21.521V30.48L28 36.08L28.006 36.082Z" fill="white"/>
+                    </svg>
+                    <svg class="sound__img" id="sound-off" viewBox="0 0 57 54" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="30" cy="27" r="26" fill="#EC1119"/>
+                        <path d="M40 27C40.0052 29.0946 39.1838 31.1066 37.714 32.599C37.5274 32.784 37.2755 32.8881 37.0128 32.8888C36.75 32.8895 36.4975 32.7868 36.3099 32.6029C36.1223 32.4189 36.0146 32.1686 36.0101 31.9058C36.0057 31.6431 36.1048 31.3892 36.286 31.199C37.3847 30.0777 38.0001 28.5704 38.0001 27.0005C38.0001 25.4306 37.3847 23.9233 36.286 22.802C36.1048 22.6118 36.0057 22.3579 36.0101 22.0952C36.0146 21.8325 36.1223 21.5821 36.3099 21.3981C36.4975 21.2142 36.75 21.1115 37.0128 21.1122C37.2755 21.1129 37.5274 21.217 37.714 21.402C39.1835 22.8941 40.005 24.9058 40 27ZM39.684 17.27C39.4904 17.0886 39.2327 16.9915 38.9675 17.0002C38.7023 17.0088 38.4514 17.1224 38.27 17.316C38.0886 17.5096 37.9915 17.7674 38.0002 18.0325C38.0088 18.2977 38.1224 18.5486 38.316 18.73C39.4754 19.7733 40.4026 21.0488 41.0372 22.4736C41.6718 23.8984 41.9998 25.4407 41.9998 27.0005C41.9998 28.5603 41.6718 30.1026 41.0372 31.5274C40.4026 32.9522 39.4754 34.2277 38.316 35.271C38.1225 35.4524 38.009 35.7032 38.0005 35.9683C37.992 36.2334 38.0891 36.491 38.2705 36.6845C38.4519 36.878 38.7027 36.9915 38.9678 37C39.2329 37.0085 39.4905 36.9114 39.684 36.73C41.0431 35.4997 42.1294 33.9982 42.8728 32.3225C43.6162 30.6467 44.0003 28.8338 44.0003 27.0005C44.0003 25.1672 43.6162 23.3543 42.8728 21.6785C42.1294 20.0028 41.0431 18.5003 39.684 17.27ZM34 16.92V37.08C33.9955 37.444 33.8923 37.7999 33.7015 38.11C33.5107 38.42 33.2395 38.6725 32.9166 38.8405C32.5937 39.0086 32.2312 39.086 31.8679 39.0644C31.5045 39.0428 31.1537 38.9231 30.853 38.718L22.686 33H19C18.2044 33 17.4413 32.6839 16.8787 32.1213C16.3161 31.5587 16 30.7957 16 30V24C16 23.2044 16.3161 22.4413 16.8787 21.8787C17.4413 21.3161 18.2044 21 19 21H22.685L30.853 15.282C31.1538 15.0769 31.5046 14.9572 31.8681 14.9356C32.2316 14.9141 32.5941 14.9915 32.917 15.1597C33.2399 15.3279 33.5112 15.5805 33.7019 15.8907C33.8926 16.2009 33.9956 16.5559 34 16.92ZM22 23H19C18.7348 23 18.4804 23.1054 18.2929 23.2929C18.1054 23.4804 18 23.7348 18 24V30C18 30.2652 18.1054 30.5196 18.2929 30.7071C18.4804 30.8946 18.7348 31 19 31H22V23ZM32.006 37.082L32 16.921L24 22.521V31.48L32 37.08L32.006 37.082Z" fill="white"/>
+                        <path d="M55.5 2L1.5 52.5" stroke="white" stroke-width="3"/>
+                    </svg>
+                </button>
+            </div>
+            <audio id="audio" preload="auto" muted>
+                <source src="assets/sound/sea-relax.mp3" type="audio/mpeg">
+                <source src="assets/sound/sea-relax.ogg" type="audio/ogg">
+            </audio>
+            <div class="container">
+                <div class="blocks-wrapper">
+                    <div class="block" id="block-1">
+                        <div class="container section">
+                            <div class="main-block-wrapper">
+                                <div class="main-block-wrapper__item img-one">
+                                    <img class="main-block-wrapper__img" src="assets/img/three-steps/one/girl.webp" alt="/" title="/" loading="lazy">
+                                </div>
+                                <div class="main-block-wrapper__item img-two">
+                                    <picture>
+                                        <source srcset="assets/img/three-steps/one/tiffany-pampered-pc.webp" media="(min-width: 992px)">
+                                        <img class="main-block-wrapper__img" src="assets/img/three-steps/one/tiffany-pampered-mob.webp" alt="/" title="/" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="main-block">
+                                <div class="text-wrapper">
+                                    <div class="item-wrapper">
+                                        <p class="text-attention">Stop spending time on mediocre online stuff!</p>
+                                    </div>
+                                    <h1 class="title" data-text="Explore our intriguing 3D game">Explore our intriguing 3D game</h1>
+                                    <p class="description">instead and experience unparalleled pleasure like you've never seen before.</p>
+                                </div>
+                                <div class="btn-wrapper">
+                                    <a id="continue-btn" class="btn-main" href="">Continue</a>
+                                    <a class="btn-end" href="">No,thanks</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider block" id="block-2">
+                            <div class="slider-block">
+                                <h2 class="title" data-text="Who Would You Choose as Your First Partner, if you play right now?">Who Would You Choose as Your First Partner, if you play right now?</h2>
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider__item">
+                                            <div class="slider__wrapper">
+                                                <picture>
+                                                    <source media="(min-width: 992px)" srcset="assets/img/three-steps/two/your-neighbor-pc.webp">
+                                                    <img class="slider__img" src="assets/img/three-steps/two/your-neighbor.webp" alt="/" title="/" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <p class="slider__text">Your Neighbor</p>
+                                        </div>
+                                        <div class="swiper-slide slider__item">
+                                            <div class="slider__wrapper">
+                                                <picture>
+                                                    <source media="(min-width: 992px)" srcset="assets/img/three-steps/two/step-sister-pc.webp">
+                                                    <img class="slider__img" src="assets/img/three-steps/two/step-sister.webp" alt="/" title="/" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <p class="slider__text">Step-Sister</p>
+                                        </div>
+                                        <div class="swiper-slide slider__item">
+                                            <div class="slider__wrapper">
+                                                <picture>
+                                                    <source media="(min-width: 992px)" srcset="assets/img/three-steps/two/famous-celebrity-pc.webp">
+                                                    <img class="slider__img" src="assets/img/three-steps/two/famous-celebrity.webp" alt="/" title="/" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <p class="slider__text">Famous Celebrity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg class="arrow-mob" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807614 12.0208 0.807614 12.6066 1.3934C13.1924 1.97919 13.1924 2.92893 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM36 13.5L2 13.5L2 10.5L36 10.5L36 13.5Z" fill="white"/>
+                                    </svg>
+                                    <svg class="arrow-pc" width="94" height="24" viewBox="0 0 94 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939339 10.9393ZM94 10.5L2 10.5V13.5L94 13.5V10.5Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg class="arrow-mob" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.32372e-07 13.5L34 13.5L34 10.5L1.32372e-07 10.5L-1.32372e-07 13.5Z" fill="white"/>
+                                    </svg>
+                                    <svg class="arrow-pc" width="94" height="24" viewBox="0 0 94 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M93.0607 13.0607C93.6464 12.4749 93.6464 11.5251 93.0607 10.9393L83.5147 1.3934C82.9289 0.807611 81.9792 0.807611 81.3934 1.3934C80.8076 1.97919 80.8076 2.92893 81.3934 3.51472L89.8787 12L81.3934 20.4853C80.8076 21.0711 80.8076 22.0208 81.3934 22.6066C81.9792 23.1924 82.9289 23.1924 83.5147 22.6066L93.0607 13.0607ZM0 13.5L92 13.5V10.5L0 10.5L0 13.5Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <a class="btn-main" id="next-btn" href="#">Next</a>
+                            </div>
+                    </div>
+                    <div class="completed block" id="block-3">
+                        <div class="completed-main">
+                            <div class="completed-main-text">
+                                <h1 class="title" data-text="Warning">Warning</h1>
+                                <p class="description">You must be at least 18 years old and comfortable with mature topics to play the game.</p>
+                            </div>
+                            <div class="completed-main-wrapper">
+                                <div class="completed-main-wrapper__item img-one">
+                                    <img class="completed-main__img" src="assets/img/three-steps/three/girl-2-pc.webp" alt="/" title="/" loading="lazy">
+                                </div>
+                                <div class="completed-main-wrapper__item img-two">
+                                    <picture>
+                                        <source srcset="assets/img/three-steps/three/girl-1-pc.webp" media="(min-width: 992px)">
+                                        <img class="completed-main__img" src="assets/img/three-steps/three/girl-1-mob.webp" alt="/" title="/" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <a class="btn-main" href="#">Ok Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
